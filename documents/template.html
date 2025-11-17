@@ -6,9 +6,8 @@
   <title>TodoApp Template</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- CDN Tailwind pour preview (remplacé par Vite/Tailwind dans l'app) -->
-  <script src="https://cdn.tailwindcss.com">﻿</script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-﻿
 
 <body class="min-h-full flex flex-col items-center bg-slate-600 text-slate-100">
   <!-- HEADER -->
@@ -16,14 +15,14 @@
     <h1 class="text-4xl font-bold text-slate-400 tracking-tight">TodoApp</h1>
     <p class="text-slate-400 mt-2">A clean & simple template.</p>
   </header>
-  ﻿
+
   <!-- MAIN -->
   <main class="w-full max-w-xl mt-8 bg-slate-200 rounded-xl">
     <!-- CARD LISTE -->
     <section class="bg-slate-100 rounded-xl shadow ring-1 ring-slate-200/60 overflow-hidden"
       aria-labelledby="todo-heading">
       <h2 id="todo-heading" class="sr-only">Todo list</h2>
-      ﻿
+
       <!-- INPUT PRINCIPAL -->
       <div class="border-b border-slate-200 bg-slate-50 py-3 px-4 sm:p-5">
         <form class="flex gap-2" aria-label="Add a new task">
@@ -36,7 +35,7 @@
           </button>
         </form>
       </div>
-      ﻿
+
       <!-- LISTE DES TODOS -->
       <ul class="m-4 divide-y divide-slate-200" role="list" aria-label="Todos">
         <!-- ITEM (exemple) -->
@@ -58,7 +57,7 @@
           <input type="text" value="Buy milk"
             class="hidden mt-2 w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </li>
-        ﻿
+
         <li class="px-4 py-3 sm:px-5" role="listitem">
           <div class="flex items-center gap-3">
             <input id="t2" type="checkbox" checked
@@ -75,7 +74,7 @@
           <input type="text" value="Finish homework"
             class="hidden mt-2 w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </li>
-        ﻿
+
         <li class="px-4 py-3 sm:px-5" role="listitem">
           <!-- Mode édition (exemple) -->
           <div class="hidden items-center gap-3">
@@ -90,13 +89,13 @@
           <input type="text" value="Edited homework"
             class="mt-0 w-full border border-slate-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         </li>
-        ﻿
+
         <!-- Message si aucun todo (à gérer en Vue) -->
         <li class="px-4 py-6 sm:px-5 text-slate-400 italic text-center hidden" role="listitem">
           No tasks yet.
         </li>
       </ul>
-      ﻿
+
       <!-- FOOTER DE LISTE -->
       <div class="border-t border-slate-300 bg-slate-300 px-4 py-3 sm:px-5 text-slate-600" role="contentinfo"
         aria-label="Todo list footer">
@@ -106,7 +105,7 @@
             <span id="items-left" class="font-medium" aria-live="polite" aria-atomic="true">2</span>
             items left
           </p>
-          ﻿
+
           <!-- Filtres -->
           <nav class="flex items-center gap-2" aria-label="Filters">
             <button
@@ -125,7 +124,7 @@
               Completed
             </button>
           </nav>
-          ﻿
+
           <!-- Action secondaire -->
           <div class="sm:ml-auto">
             <button
@@ -137,7 +136,7 @@
       </div>
     </section>
   </main>
-  ﻿
+
   <!-- FOOTER GLOBAL -->
   <footer class="my-6 text-slate-400 text-sm text-center">
     <p>Simple Todo Template — Tailwind CSS · EAFC 2025</p>

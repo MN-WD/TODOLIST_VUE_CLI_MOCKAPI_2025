@@ -7,7 +7,7 @@
 <template>
   <AppHeader />
   <main class="w-full max-w-xl mt-8 bg-slate-200 rounded-xl">
-    <TodoList />
+    <TodoList apiURL="https://691b2f8d2d8d78557571ea35.mockapi.io/" />
   </main>
   <AppFooter />
 </template>

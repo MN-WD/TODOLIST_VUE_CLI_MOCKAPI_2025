@@ -16,6 +16,15 @@
     todos.splice(todos.length, 0, ...(await DB.findAll()));
     // console.table(todos);
   });
+
+  // FONCTIONS CRUD
+  const createItem = async (content) => {
+    // 1. Ajouter dans todos
+    //    On envoie le nouveau content à DB.create qui retourne un todo complet
+    const todo = await DB.create(content);
+    todos.push(todo);
+    // 2. Lancer DB.create
+  };
 </script>
 
 <template>
@@ -25,7 +34,7 @@
       <h2 id="todo-heading" class="sr-only">Todo list</h2>
 
       <!-- INPUT PRINCIPAL -->
-      <TodoListAddForm />
+      <TodoListAddForm @on-submit-add-form="createItem($event)" />
 
       <!-- LISTE DES TODOS -->
       <ul class="m-4 divide-y divide-slate-200 text-slate-600" role="list" aria-label="Todos">

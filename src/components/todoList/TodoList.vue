@@ -1,5 +1,5 @@
 <script setup>
-  import { reactive, onMounted } from 'vue';
+  import { reactive, onMounted, computed } from 'vue';
   import DB from '@/services/DB';
   import TodoListAddForm from './TodoListAddForm.vue';
   import TodoListFooter from './TodoListFooter.vue';
@@ -10,6 +10,10 @@
   });
 
   const todos = reactive([]);
+
+  const notCompletedCount = computed(
+    () => todos.filter(todo => !todo.completed).length
+  );
 
   // onMounted quand des objets sont créés dans le DOM, on prend le tableau todos et on y met le résultat de la transaction ajax pour chercher les todos dans l'API
   // On intervient quand les éléments (todos) sont créés dans le DOM, on y met les infos de la DB
@@ -63,7 +67,7 @@
       </ul>
 
       <!-- FOOTER DE LISTE -->
-      <TodoListFooter />
+      <TodoListFooter :notCompletedCount="notCompletedCount" />
     </section>
 </template>
 

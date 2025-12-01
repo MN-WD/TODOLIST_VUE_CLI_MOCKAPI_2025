@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+    const props = defineProps({
+        notCompletedCount: { type: Number, required: true }
+    });
+</script>
 
 <template>
     <div class="border-t border-slate-300 bg-slate-300 px-4 py-3 sm:px-5 text-slate-600" role="contentinfo"
@@ -6,7 +10,7 @@
         <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <!-- Compteur avec aria-live -->
         <p class="text-sm">
-        <span id="items-left" class="font-medium" aria-live="polite" aria-atomic="true">2</span>
+        <span id="items-left" class="font-medium" aria-live="polite" aria-atomic="true">{{ notCompletedCount }}</span>
         items left
         </p>
 

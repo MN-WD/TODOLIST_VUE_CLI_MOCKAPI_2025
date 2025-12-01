@@ -1,5 +1,6 @@
 <script setup>
     import { ref } from "vue";
+
     const emits = defineEmits(['onSubmitAddForm']);
 
     const newContent = ref("");
@@ -7,6 +8,7 @@
     const onSubmitAddForm = () => {
         emits("onSubmitAddForm", newContent.value);
         newContent.value = "";
+        // Remet valeur par défaut à 0
     }
 </script>
 

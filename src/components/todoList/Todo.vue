@@ -1,7 +1,14 @@
 <script setup>
     const props = defineProps({
-        todo: { type: Object, required: true},
+        todo: { type: Object, required: true },
     });
+
+    const emits = defineEmits(["onDelete"]);
+
+    const onDelete = () => {
+        emits("onDelete", props.todo.id);
+        // Dans le script, on met props.(name) pour accéder à la props
+    }
 </script>
 
 <template>
@@ -22,7 +29,8 @@
         </label>
         <button
             class="text-red-600/90 hover:text-red-700 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 rounded"
-            aria-label="Delete task" title="Delete">
+            aria-label="Delete task" title="Delete"
+            @click="onDelete">
             ✕
         </button>
         </div>
